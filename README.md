@@ -1,4 +1,4 @@
-# NodeJsTutorial
+# NodeJs Tutorial
 
 1. Node.js is an open-source and cross-platform JavaScript runtime environment.
 2. Node.js runs the V8 JavaScript engine, the core of Google Chrome.
@@ -24,4 +24,37 @@ write console.log("Hello world") in index.js.
 > node index.
 you will get the output in terminal.
 
+# Function Type
+Lets move to day two when we will see the function type. its just basic of Java ECMA6 how we will define it.
+1. Define Objects.
+
+var obj =  {name : "satya", phoneNo : 1234567890, email : "Test@gmail.com"}
+
+console.log(obj);
+console.log(obj.name);
+
+2. anonymous method
+Function which is not having the name is called anonymous function.
+
+var v = function() 
+{
+    console.log("this is anonymous function");
+}
+
+v();
+
+3. Arrow function is based on arrow function keys
+
+var v = () =>     console.log("this is arrow function");
+v()
+
+4. Multi line values Arrow function.
+
+var v = (a , b) => 
+{
+    console.log("addition is :");
+    console.log(a + b);
+};
+
+v(2,3);
 
