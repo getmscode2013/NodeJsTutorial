@@ -3,7 +3,7 @@ var obj =  {name : "satya", phoneNo : 1234567890, email : "Test@gmail.com"}
 console.log(obj);
 console.log(obj.name);
 
-// Function whicch is not having the name is called ananomus function.
+// Function which is not having the name is called anonymous function.
 var v = function() 
 {
     console.log("this is anonymous function");
