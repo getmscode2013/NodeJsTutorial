@@ -13,6 +13,18 @@ node -v
 2. Check for NodePackageManager (npm) version.
 npm -v
 3. start node terminal you can type > node
+
+It will open the Online REPL Terminal
+a) Read − Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
+b) Eval − Takes and evaluates the data structure.
+c) Print − Prints the result.
+d) Loop − Loops the above command until the user presses ctrl-c twice.
+
+like 
+$ node
+> 1 + 3
+4 
+
 4. Create the first application as Hellow world as.
 Create folder day1--> go folder by Cd command -> Now type
 >npm init
