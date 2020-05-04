@@ -41,6 +41,7 @@ build/Release
 node_modules/
 jspm_packages/
 day10-expressTest/node_modules/
+day11-ExpressAppGenerator/node_modules/
 
 # TypeScript v1 declaration files
 typings/
