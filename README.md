@@ -70,3 +70,112 @@ var v = (a , b) =>
 
 v(2,3);
 
+
+# Day 3 -  Global Object
+ In NodeJs Global Object, Object which we can be access by any modules.
+ 
+ We do not need to include these objects in our application, rather we can use them directly
+ 
+ // __dirname : it use to check  the directive name.
+console.log(__dirname)
+
+//__filename : it use to check the file name.
+console.log(__filename)
+
+__// Console : it view the data in terimnal.
+console.log("Satya")
+
+__// Require : include any out side module in page.
+var requireTest = require("./requiretest");
+console.log(requireTest.abc);
+Creating your own module.
+
+Requiretest.js
+========================================================
+// Arrow function is based on arrow function keys/
+
+const name = "Satya Rathore";
+var v1 = () =>     console.log("this is arrow function");
+v1();
+
+module.exports.abc = name;
+========================================================
+
+Some other global object aree
+//buffer
+//module
+//Reports
+//Process
+
+
+# Day 11 -  Express App Generator
+
+1. Expression App generator is not directly working for me to Install from Terminal of Visual Studio Code.
+
+2. I installed the nodeJsexpression from node.js commond prompt.
+
+3. For more details about express applocation generation you can see the below URL.
+https://expressjs.com/en/starter/generator.html
+
+4. It provide the step by step way to do that.
+
+5. After installed it successfully, used below command to get the application template.
+>express E:\node_tutorial\day11-ExpressAppGenerator
+
+6. Move to >cd E:\node_tutorial\day11-ExpressAppGenerator
+
+7. Now run the application as below.
+
+8. Now get the template of pug instade of creating blank and default template.
+>express --view=ejs E:\node_tutorial\day11-ExpressAppGenerator
+
+9. Than install all the packages
+> npm install
+
+10. Now we run the application by.
+> SET DEBUG=day11-expressappgenerator:* & npm start
+
+11. It create all the structure of application which is required.
+a) Public -- Whch is work like assets folder having image, Script and style locations.
+b) Routes -- It contain the defination of all rotings.
+c) View -- All application view.
+
+12. To add any view or update the any view you need to check the view file.
+
+like index.ejs
+=========================
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= message %></p>
+  </body>
+</html>
+====================
+ 
+ In above you can see the title and Message is binding dynamically and it is passing from the routes file.
+ Routes/Index.js
+ ===========================
+ var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Satya', message : 'Welcome to NodeJs exress'  });
+});
+
+module.exports = router;
+
+=============================
+
+Here you can see the Title  is satya and Message is 'Welcome to NodeJs exress' 
+you can see it in browser as.
+<img src="">
+
+ 
+ 
