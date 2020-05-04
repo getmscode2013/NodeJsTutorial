@@ -1,4 +1,4 @@
-# NodeJs Tutorial
+# Introduction : NodeJs Tutorial
 
 1. Node.js is an open-source and cross-platform JavaScript runtime environment.
 2. Node.js runs the V8 JavaScript engine, the core of Google Chrome.
@@ -7,7 +7,7 @@
 5. Node.js is born on 2009.
 6. The first form of npm is created 2010.
 
-# Hello world
+# Day 1 : Hello world
 1. Check the nodejs installation with version by.
 node -v
 2. Check for NodePackageManager (npm) version.
@@ -36,7 +36,7 @@ write console.log("Hello world") in index.js.
 > node index.
 you will get the output in terminal.
 
-# Function Type
+# Day 2 : Function Type
 Lets move to day two when we will see the function type. its just basic of Java ECMA6 how we will define it.
 1. Define Objects.
 
@@ -82,10 +82,10 @@ console.log(__dirname)
 //__filename : it use to check the file name.
 console.log(__filename)
 
-__// Console : it view the data in terimnal.
+// Console : it view the data in terimnal.
 console.log("Satya")
 
-__// Require : include any out side module in page.
+// Require : include any out side module in page.
 var requireTest = require("./requiretest");
 console.log(requireTest.abc);
 Creating your own module.
@@ -101,7 +101,8 @@ v1();
 module.exports.abc = name;
 ========================================================
 
-Some other global object aree
+Some other global object are
+
 //buffer
 //module
 //Reports
@@ -175,7 +176,7 @@ module.exports = router;
 
 Here you can see the Title  is satya and Message is 'Welcome to NodeJs exress' 
 you can see it in browser as.
-<img src="">
+<img src="https://github.com/getmscode2013/NodeJsTutorial/blob/master/day11-ExpressAppGenerator/screen.png">
 
  
  
