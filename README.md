@@ -99,6 +99,7 @@ var v1 = () =>     console.log("this is arrow function");
 v1();
 
 module.exports.abc = name;
+
 ========================================================
 
 Some other global object are
@@ -143,7 +144,8 @@ c) View -- All application view.
 
 12. To add any view or update the any view you need to check the view file.
 
-like index.ejs
+
+index.ejs
 =========================
 
 <!DOCTYPE html>
@@ -160,6 +162,8 @@ like index.ejs
 ====================
  
  In above you can see the title and Message is binding dynamically and it is passing from the routes file.
+ 
+ 
  Routes/Index.js
  ===========================
  var express = require('express');
@@ -176,6 +180,7 @@ module.exports = router;
 
 Here you can see the Title  is satya and Message is 'Welcome to NodeJs exress' 
 you can see it in browser as.
+
 <img src="https://github.com/getmscode2013/NodeJsTutorial/blob/master/day11-ExpressAppGenerator/screen.png">
 
  
