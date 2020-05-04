@@ -5,7 +5,7 @@
 //module
 //Reports
 
-//__dirmname
+//__dirname
 console.log(__dirname)
 
 //__filename
