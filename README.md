@@ -112,40 +112,40 @@ Some other global object are
 
 # Day 10 -  ExpressJs
 
-ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for devlopment.
+ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
 
-1.  You can know more details about expressjs from https://expressjs.com/
+1.  You can know more details about expressjs from https://expressjs.com/<br />
 
-2.  Tag of express Js is well suited "Fast, unopinionated, minimalist web framework for Node.js"
+2.  Tag of express Js is well suited "Fast, unopinionated, minimalist web framework for Node.js"<br />
 
-3.  install express by 
-// npm install express --save
-
-
-3.  You can see the below code, previously when we have checked for http, it took many line of code to see in browser.
-// you can get same code on expressjs website.
-
-const ex = require("express");
-const app = ex();
-
-app.get('/', (req, res) => { res.send('Hello world'); })
-app.listen("4000", () => console.log("Server is running on port 4000"));
+3.  install express by <br />
+// npm install express --save<br /><br />
 
 
-4. With  expressJs you can create Web application, Middleware (API).
-Which is easier to interagte with application.
+4.  You can see the below code, previously when we have checked for http, it took many line of code to see in browser.<br />
+// you can get same code on expressjs website. <br /><br />
+
+const ex = require("express");<br />
+const app = ex();<br /><br />
+
+app.get('/', (req, res) => { res.send('Hello world'); })<br />
+app.listen("4000", () => console.log("Server is running on port 4000"));<br /><br />
 
 
-5.  Basic routing :
-// You can see how to handle the routing using the express JS like get/post
-// you can see below for more details about routing.
-// https://expressjs.com/en/starter/basic-routing.html
+4. With  expressJs you can create Web application, Middleware (API).<br />
+Which is easier to interagte with application.<br /><br />
 
-<h3>Index.js </h3>
 
-========================
-const ex = require("express");
-const app = ex();
+5.  Basic routing :<br />
+// You can see how to handle the routing using the express JS like get/post<br />
+// you can see below for more details about routing.<br />
+// https://expressjs.com/en/starter/basic-routing.html<br /><br />
+
+<h3>Index.js </h3><br /><br />
+
+========================<br />
+const ex = require("express");<br />
+const app = ex();<br />
 
 app.get('/', (req, res) => { res.send('Hello world'); })
 
