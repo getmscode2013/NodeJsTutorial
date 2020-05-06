@@ -157,7 +157,7 @@ index.ejs
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1 ><%= title %>< /h1>
     <p><%= message %></p>
   </body>
 </html>
