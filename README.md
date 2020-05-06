@@ -110,6 +110,55 @@ Some other global object are
 //Reports
 //Process
 
+# Day 10 -  ExpressJs
+
+ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for devlopment.
+
+1.  You can know more details about expressjs from https://expressjs.com/
+
+2.  Tag of express Js is well suited "Fast, unopinionated, minimalist web framework for Node.js"
+
+3.  install express by 
+// npm install express --save
+
+
+3.  You can see the below code, previously when we have checked for http, it took many line of code to see in browser.
+// you can get same code on expressjs website.
+
+const ex = require("express");
+const app = ex();
+
+app.get('/', (req, res) => { res.send('Hello world'); })
+app.listen("4000", () => console.log("Server is running on port 4000"));
+
+
+4. With  expressJs you can create Web application, Middleware (API).
+Which is easier to interagte with application.
+
+
+5.  Basic routing :
+// You can see how to handle the routing using the express JS like get/post
+// you can see below for more details about routing.
+// https://expressjs.com/en/starter/basic-routing.html
+
+<h3>Index.js </h3>
+
+========================
+const ex = require("express");
+const app = ex();
+
+app.get('/', (req, res) => { res.send('Hello world'); })
+
+// like above you can defined with parameter
+app.get('/Books', (req, res) => { res.send('Book selves'); })
+
+// Above you can seen only te get methods, 
+// What happend if there is post method like below, Then you can not access from URL.
+// You can either use postmn or Fiddler to check the post methods
+app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })
+
+app.listen("4000", () => console.log("Server is running on port 4000"));
+
 
 # Day 11 -  Express App Generator
 
