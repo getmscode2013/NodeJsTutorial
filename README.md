@@ -141,23 +141,23 @@ Which is easier to interagte with application.<br /><br />
 // you can see below for more details about routing.<br />
 // https://expressjs.com/en/starter/basic-routing.html<br /><br />
 
-<h3>Index.js </h3><br /><br />
+<h3>Index.js </h3>
 
 ========================<br />
 const ex = require("express");<br />
 const app = ex();<br />
 
-app.get('/', (req, res) => { res.send('Hello world'); })
+app.get('/', (req, res) => { res.send('Hello world'); })<br /><br />
 
-// like above you can defined with parameter
-app.get('/Books', (req, res) => { res.send('Book selves'); })
+// like above you can defined with parameter<br />
+app.get('/Books', (req, res) => { res.send('Book selves'); })<br />
 
-// Above you can seen only te get methods, 
-// What happend if there is post method like below, Then you can not access from URL.
-// You can either use postmn or Fiddler to check the post methods
-app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })
+// Above you can seen only te get methods, <br />
+// What happend if there is post method like below, Then you can not access from URL.<br />
+// You can either use postmn or Fiddler to check the post methods<br />
+app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })<br /><br />
 
-app.listen("4000", () => console.log("Server is running on port 4000"));
+app.listen("4000", () => console.log("Server is running on port 4000"));<br />
 
 
 # Day 11 -  Express App Generator
