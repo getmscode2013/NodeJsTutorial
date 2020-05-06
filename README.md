@@ -1,4 +1,4 @@
-# NodeJs Tutorial
+# Introduction : NodeJs Tutorial
 
 1. Node.js is an open-source and cross-platform JavaScript runtime environment.
 2. Node.js runs the V8 JavaScript engine, the core of Google Chrome.
@@ -7,7 +7,7 @@
 5. Node.js is born on 2009.
 6. The first form of npm is created 2010.
 
-# Hello world
+# Day 1 : Hello world
 1. Check the nodejs installation with version by.
 node -v
 2. Check for NodePackageManager (npm) version.
@@ -36,7 +36,7 @@ write console.log("Hello world") in index.js.
 > node index.
 you will get the output in terminal.
 
-# Function Type
+# Day 2 : Function Type
 Lets move to day two when we will see the function type. its just basic of Java ECMA6 how we will define it.
 1. Define Objects.
 
@@ -82,15 +82,16 @@ console.log(__dirname)
 //__filename : it use to check the file name.
 console.log(__filename)
 
-__// Console : it view the data in terimnal.
+// Console : it view the data in terimnal.
 console.log("Satya")
 
-__// Require : include any out side module in page.
+// Require : include any out side module in page.
 var requireTest = require("./requiretest");
 console.log(requireTest.abc);
 Creating your own module.
 
 Requiretest.js
+
 ========================================================
 // Arrow function is based on arrow function keys/
 
@@ -99,13 +100,64 @@ var v1 = () =>     console.log("this is arrow function");
 v1();
 
 module.exports.abc = name;
+
 ========================================================
 
-Some other global object aree
+Some other global object are
+
 //buffer
 //module
 //Reports
 //Process
+
+# Day 10 -  ExpressJs
+
+ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
+
+1.  You can know more details about expressjs from https://expressjs.com/<br />
+
+2.  Tag of express Js is well suited "Fast, unopinionated, minimalist web framework for Node.js"<br />
+
+3.  install express by <br />
+// npm install express --save<br /><br />
+
+
+4.  You can see the below code, previously when we have checked for http, it took many line of code to see in browser.<br />
+// you can get same code on expressjs website. <br /><br />
+
+const ex = require("express");<br />
+const app = ex();<br /><br />
+
+app.get('/', (req, res) => { res.send('Hello world'); })<br />
+app.listen("4000", () => console.log("Server is running on port 4000"));<br /><br />
+
+
+4. With  expressJs you can create Web application, Middleware (API).<br />
+Which is easier to interagte with application.<br /><br />
+
+
+5.  Basic routing :<br />
+// You can see how to handle the routing using the express JS like get/post<br />
+// you can see below for more details about routing.<br />
+// https://expressjs.com/en/starter/basic-routing.html<br /><br />
+
+<h3>Index.js </h3>
+
+========================<br />
+const ex = require("express");<br />
+const app = ex();<br />
+
+app.get('/', (req, res) => { res.send('Hello world'); })<br /><br />
+
+// like above you can defined with parameter<br />
+app.get('/Books', (req, res) => { res.send('Book selves'); })<br />
+
+// Above you can seen only te get methods, <br />
+// What happend if there is post method like below, Then you can not access from URL.<br />
+// You can either use postmn or Fiddler to check the post methods<br />
+app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })<br /><br />
+
+app.listen("4000", () => console.log("Server is running on port 4000"));<br />
 
 
 # Day 11 -  Express App Generator
@@ -142,7 +194,9 @@ c) View -- All application view.
 
 12. To add any view or update the any view you need to check the view file.
 
-like index.ejs
+
+index.ejs
+
 =========================
 
 <!DOCTYPE html>
@@ -152,14 +206,17 @@ like index.ejs
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    < h1 ><%= title %>< /h1 >
     <p><%= message %></p>
   </body>
 </html>
 ====================
  
  In above you can see the title and Message is binding dynamically and it is passing from the routes file.
+ 
+ 
  Routes/Index.js
+ 
  ===========================
  var express = require('express');
 var router = express.Router();
@@ -175,7 +232,8 @@ module.exports = router;
 
 Here you can see the Title  is satya and Message is 'Welcome to NodeJs exress' 
 you can see it in browser as.
-<img src="">
+
+<img src="https://github.com/getmscode2013/NodeJsTutorial/blob/master/day11-ExpressAppGenerator/screen.png">
 
  
  
