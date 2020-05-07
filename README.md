@@ -236,4 +236,67 @@ you can see it in browser as.
 <img src="https://github.com/getmscode2013/NodeJsTutorial/blob/master/day11-ExpressAppGenerator/screen.png">
 
  
+ # Day 12 -  Expressjs Inclusing Static Files
+ 
+1.  While creating the application we need to include  many Static files like Images, CSS , JS etc.
+
+2.  In NODEJS for express  it will provide the middleware to create access the static file.
+
+3. If you will not include the middleware, it will not show the static file you included to project.
+
+4. Lets include express js in application similar way we did it on day 10
+// npm install express --save
+
+5. Lets create folder starature with the name assets and having sub folder. <br/ >
+- Images : It contain images.
+- style : In contains Style sheet
+
+6.  We will keep our static file there
+
+7. Lets see HTML file structure with Image and CSS.
+
+<b>index.html </b>
+
+===========================
+<html>
+<title>
+    My static Page
+</title>
+
+<head>
+    <link rel="stylesheet" href="/Css/style.css">
+</head>
+
+<body>
+    <table  >
+        <tr>
+            <td class="tableBody">   images about the timer control</td>
+            <td>  <img src="/images/iconfinder_tower_748987.png" width=100></td>
+        </tr>
+    </table>
+   
+</body>
+
+</html>
+
+8. Now include the middleware component in Index.js as below.
+
+Index.js
+
+======
+const ex = require("express");
+const app = ex();
+
+<b>app.use(ex.static('assets')) </b>
+
+
+// to include file we need to use sendfile and add the file name
+app.get('/', (req, res) => { res.sendfile("index.html"); })
+
+
+app.listen("4000", () => console.log("Server is running on port 4000"));
+
+ 9. Output you will get in the screen as.
+ 
+ <img src="https://github.com/getmscode2013/NodeJsTutorial/blob/master/day12-StaticFiles/staticoutput.png">
  
