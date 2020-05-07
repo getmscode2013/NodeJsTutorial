@@ -258,26 +258,26 @@ you can see it in browser as.
 <b>index.html </b>
 
 ===========================
-html
-title
+html <br/>
+title<br/>
     My static Page
-/title
+/title<br/>
 
-head
-    link rel="stylesheet" href="/Css/style.css"
-/head
+head<br/>
+    link rel="stylesheet" href="/Css/style.css"<br/>
+/head<br/><br/>
 
-body
-    table
-        tr
-            td class="tableBody"   images about the timer control /td
-            td  img src="/images/iconfinder_tower_748987.png" width=100 /td
-        /tr
-    /table
+body<br/>
+    table<br/>
+        tr<br/>
+            td class="tableBody"   images about the timer control /td<br/>
+            td  img src="/images/iconfinder_tower_748987.png" width=100 /td<br/>
+        /tr<br/>
+    /table<br/><br/>
    
-/body
+/body<br/><br/>
 
-/html
+/html<br/>
 
 8. Now include the middleware component in Index.js as below.
 
