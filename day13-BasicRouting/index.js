@@ -58,6 +58,11 @@ app.get('/users/:userId', function (req, res) {
     res.send(req.params)
 })
 
+// If you want passing value whould not mandatory than you can use
+app.get('/users/:userId?', function (req, res) {
+    res.send(req.params)
+})
+
 // You can pass the mutiple paramnter on route URL as like below.
 // Input http://localhost:4000/users/50/books/5
 // Output {"userId":"50","bookId":"5"}
