@@ -327,26 +327,26 @@ app.get('/', function (req, res) {
 8. <b>Route paths</b>
  a. Route paths, in combination with a request method, define the endpoints at which requests can be made.
  b. The characters ?, +, *, and () are subsets of their regular expression counterparts
- c. The route path will match requests to /contacts. <br /><br />
+ c. The route path will match requests to /contacts. <br />
 
 app.get('/about', function (req, res) {
     res.send('about')
   })
   
-9. This route path will match acd and abcd. Either b or not.<br /><br />
+9. This route path will match acd and abcd. Either b or not.<br />
 
 app.get('/ab?cd', function (req, res) {
     res.send('ab?cd')
   })
   
  10. This route path will match abcd, abxcd, abRANDOMcd, ab123cd, and so on.
-front (ab) and last(cd) and in between any random text you can put.<br /><br />
+front (ab) and last(cd) and in between any random text you can put.<br />
 
 app.get('/ab*cd', function (req, res) {
     res.send('ab*cd')
   })
   
- 11. This route path will match abcd, abbcd, abbbcd, and so on. You can place mutiple time b.<br /><br />
+ 11. This route path will match abcd, abbcd, abbbcd, and so on. You can place mutiple time b.<br />
  app.get('/ab+cd', function (req, res) {
     res.send('ab+cd')
   })
@@ -355,21 +355,21 @@ app.get('/ab*cd', function (req, res) {
  Passing the parameter on Route URL
  You need to define the Route URL like below.
  Input http://localhost:4000/users/50
- output {"userId":"50"}<br /><br />
+ output {"userId":"50"}<br />
  
  app.get('/users/:userId', function (req, res) {
     res.send(req.params)
 })
 
 
-13. If you want passing value whould not mandatory than you can use<br /><br />
+13. If you want passing value whould not mandatory than you can use<br />
 app.get('/users/:userId?', function (req, res) {
     res.send(req.params)
 })
 
 14.  You can pass the mutiple paramnter on route URL as like below.
 Input http://localhost:4000/users/50/books/5
- Output {"userId":"50","bookId":"5"} <br /><br />
+ Output {"userId":"50","bookId":"5"} <br />
  
  app.get('/users/:userId/books/:bookId', function (req, res) {
     res.send(req.params)
@@ -377,7 +377,7 @@ Input http://localhost:4000/users/50/books/5
   
  15.  You can seperate the parameters also by using -
  Input value for that http://localhost:4000/flights/hyderabad-Cg
- output {"from":"hyderabad","to":"Cg"} <br /><br />
+ output {"from":"hyderabad","to":"Cg"} <br />
  
  app.get('/flights/:from-:to', function (req, res) {
     res.send(req.params)
