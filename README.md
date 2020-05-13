@@ -323,7 +323,7 @@ app.get('/', function (req, res) {
   res.send('hello world')
 })
 
-</b>
+</b><br /><br />
 
 7. Mostly there are two way  method for roting Get and  post but it is allowing All also.
 
@@ -337,7 +337,7 @@ app.get('/about', function (req, res) {
     res.send('about')
   })
     
-</b>
+</b><br /><br />
   
 9. This route path will match acd and abcd. Either b or not.<br />
 
@@ -345,7 +345,7 @@ app.get('/about', function (req, res) {
 app.get('/ab?cd', function (req, res) {
     res.send('ab?cd')
   })
-</b>
+</b><br /><br />
   
  10. This route path will match abcd, abxcd, abRANDOMcd, ab123cd, and so on.
 front (ab) and last(cd) and in between any random text you can put.<br />
@@ -354,14 +354,14 @@ front (ab) and last(cd) and in between any random text you can put.<br />
 app.get('/ab*cd', function (req, res) {
     res.send('ab*cd')
   })
-</b>
+</b><br /><br />
   
  11. This route path will match abcd, abbcd, abbbcd, and so on. You can place mutiple time b.<br />
  <b>
  app.get('/ab+cd', function (req, res) {
     res.send('ab+cd')
   })
- </b>
+ </b><br /><br />
  
  12.  <b>Route parameters</b>
  Passing the parameter on Route URL
@@ -373,7 +373,7 @@ app.get('/ab*cd', function (req, res) {
  app.get('/users/:userId', function (req, res) {
     res.send(req.params)
 })
-</b>
+</b><br /><br />
 
 13. If you want passing value whould not mandatory than you can use<br />
 
@@ -381,7 +381,7 @@ app.get('/ab*cd', function (req, res) {
 app.get('/users/:userId?', function (req, res) {
     res.send(req.params)
 })
-</b>
+</b><br /><br />
 
 14.  You can pass the mutiple paramnter on route URL as like below.
 Input http://localhost:4000/users/50/books/5
@@ -391,7 +391,7 @@ Input http://localhost:4000/users/50/books/5
  app.get('/users/:userId/books/:bookId', function (req, res) {
     res.send(req.params)
   })
- </b>
+ </b><br /><br />
   
  15.  You can seperate the parameters also by using -
  Input value for that http://localhost:4000/flights/hyderabad-Cg
@@ -401,4 +401,4 @@ Input http://localhost:4000/users/50/books/5
  app.get('/flights/:from-:to', function (req, res) {
     res.send(req.params)
   })
-</b>
+</b><br />
