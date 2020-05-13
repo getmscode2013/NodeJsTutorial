@@ -312,12 +312,12 @@ app.listen("4000", () => console.log("Server is running on port 4000"));
  You can also refer to below URL of express for more details.
  https://expressjs.com/en/guide/routing.html
 
-6. The following code is an example of a very basic route.
+6. The following code is an example of a very basic route. <br /><br />
 
 var express = require('express')
 var app = express()
 
-// respond with "hello world" when a GET request is made to the homepage
+// respond with "hello world" when a GET request is made to the homepage<br />
 app.get('/', function (req, res) {
   res.send('hello world')
 })
@@ -327,26 +327,26 @@ app.get('/', function (req, res) {
 8. <b>Route paths</b>
  a. Route paths, in combination with a request method, define the endpoints at which requests can be made.
  b. The characters ?, +, *, and () are subsets of their regular expression counterparts
- c. The route path will match requests to /contacts.
+ c. The route path will match requests to /contacts. <br /><br />
 
 app.get('/about', function (req, res) {
     res.send('about')
   })
   
-9. This route path will match acd and abcd. Either b or not.
+9. This route path will match acd and abcd. Either b or not.<br /><br />
 
 app.get('/ab?cd', function (req, res) {
     res.send('ab?cd')
   })
   
  10. This route path will match abcd, abxcd, abRANDOMcd, ab123cd, and so on.
-front (ab) and last(cd) and in between any random text you can put.
+front (ab) and last(cd) and in between any random text you can put.<br /><br />
 
 app.get('/ab*cd', function (req, res) {
     res.send('ab*cd')
   })
   
- 11. This route path will match abcd, abbcd, abbbcd, and so on. You can place mutiple time b.
+ 11. This route path will match abcd, abbcd, abbbcd, and so on. You can place mutiple time b.<br /><br />
  app.get('/ab+cd', function (req, res) {
     res.send('ab+cd')
   })
@@ -355,21 +355,21 @@ app.get('/ab*cd', function (req, res) {
  Passing the parameter on Route URL
  You need to define the Route URL like below.
  Input http://localhost:4000/users/50
- output {"userId":"50"}
+ output {"userId":"50"}<br /><br />
  
  app.get('/users/:userId', function (req, res) {
     res.send(req.params)
 })
 
 
-13. If you want passing value whould not mandatory than you can use
+13. If you want passing value whould not mandatory than you can use<br /><br />
 app.get('/users/:userId?', function (req, res) {
     res.send(req.params)
 })
 
 14.  You can pass the mutiple paramnter on route URL as like below.
 Input http://localhost:4000/users/50/books/5
- Output {"userId":"50","bookId":"5"}
+ Output {"userId":"50","bookId":"5"} <br /><br />
  
  app.get('/users/:userId/books/:bookId', function (req, res) {
     res.send(req.params)
@@ -377,7 +377,7 @@ Input http://localhost:4000/users/50/books/5
   
  15.  You can seperate the parameters also by using -
  Input value for that http://localhost:4000/flights/hyderabad-Cg
- output {"from":"hyderabad","to":"Cg"}
+ output {"from":"hyderabad","to":"Cg"} <br /><br />
  
  app.get('/flights/:from-:to', function (req, res) {
     res.send(req.params)
