@@ -415,3 +415,18 @@ Input http://localhost:4000/users/50/books/5
     res.send(req.params)
   })
 ```
+  ## Day 14 -  Middleware
+  
+1. Middleware is using between the req recive from client and before responding(res) to it.
+2.  In Middleware we have three paramenter **req**, **res** and the new one is **next**.
+3. You can see more detail from `expressJs' website
+```https://expressjs.com/en/guide/writing-middleware.html```
+
+4. Middleware functions can perform the following tasks: <br />
+
+-Execute any code.
+-Make changes to the request and the response objects.
+-End the request-response cycle.
+-Call the next middleware in the stack.
+
+>Let see the simple function for req and response
