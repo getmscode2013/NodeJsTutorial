@@ -197,7 +197,7 @@ app.listen("4000", () => console.log("Server is running on port 4000"));
 like below we  use ejs  creating blank and default template. <br />
 ```express --view=ejs E:\node_tutorial\day11-ExpressAppGenerator```
 
-- Open  application in visual studio Code.<br />
+- Open  application in visual studio Code and go to that directive ```cd E:\node_tutorial\day11-ExpressAppGenerator```<br />
 
 - Open Terminal and than install all the packages <br />
 ```npm install```
