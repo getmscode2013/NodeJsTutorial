@@ -524,7 +524,7 @@ Now creating the array of two middleware here  as like below.
 
 Plug that method which we need to attach that middle ware
 ```ruby
-  app.get('/user/:id', *logStuff*, function (req, res, next) {
+  app.get('/user/:id', logStuff, function (req, res, next) {
     res.send('User Info')
   })
 
