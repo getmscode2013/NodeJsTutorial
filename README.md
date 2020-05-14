@@ -133,14 +133,16 @@ ExpressJs use to build the Node Application, it make faster the devlopment and p
 
 2.  Tag of express Js is well suited "Fast, unopinionated, minimalist web framework for Node.js"<br />
 
-3.  install express by <br />
+3.  Install express by below command.<br />
+
 ```ruby
 npm install express --save
 ```
 
 
 4.  You can see the below code, previously when we have checked for http, it took many line of code to see in browser.<br />
-// you can get same code on expressjs website. <br /><br />
+- you can get same code on expressjs website. <br /><br />
+
 ```ruby
 const ex = require("express");<br />
 const app = ex();<br /><br />
@@ -157,7 +159,7 @@ Which is easier to interagte with application.<br /><br />
 - You can see how to handle the routing using the express JS like get/post<br />
 - you can see below for more details about routing.<br />
 >https://expressjs.com/en/starter/basic-routing.html 
-<br/>
+
 ```ruby
 <h3>Index.js </h3>
 
