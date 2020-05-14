@@ -9,10 +9,17 @@
 
 # Day 1 : Hello world
 1. Check the nodejs installation with version by.
+```ruby 
 node -v
+```
 2. Check for NodePackageManager (npm) version.
+```ruby
 npm -v
-3. start node terminal you can type > node
+```
+3. start node terminal you can type 
+```ruby
+> node
+```
 
 It will open the Online REPL Terminal
 a) Read − Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
@@ -33,7 +40,7 @@ Create folder day1--> go folder by Cd command -> Now type
 it will ask you ceratin detail, either you can provide details or just click on enter.
 Now you can see the package.json file on the folder.
 5. Create file Index.js
-write console.log("Hello world") in index.js. 
+write ```rubyconsole.log("Hello world")``` in index.js. 
 6. Go to terminal window, go to day1 folderand type 
 > node index.
 you will get the output in terminal.
@@ -113,10 +120,10 @@ module.exports.abc = name;
 
 Some other global object are
 
--//buffer
--//module
--//Reports
--//Process
+- //buffer
+- //module
+- //Reports
+- //Process
 
 # Day 10 -  ExpressJs
 
