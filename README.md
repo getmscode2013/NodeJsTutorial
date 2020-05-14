@@ -467,3 +467,65 @@ Calling the global
 ```ruby
 app.use(myLogger)
 ```
+
+>Let see the simple function for req and response with  middleware call by particular method
+
+```ruby
+var express = require('express')
+var app = express()
+
+
+// Logging of original URL
+function logOriginalUrl (req, res, next) {
+    console.log('Request URL:', req.originalUrl)
+    next()
+  }
+
+
+  // Log methods
+  function logMethod (req, res, next) {
+    console.log('Request Type:', req.method)
+    next()
+  }
+  
+  var logStuff = [logOriginalUrl, logMethod]
+  app.get('/user/:id', logStuff, function (req, res, next) {
+    res.send('User Info')
+  })
+
+
+app.listen(3000, () => console.log("Application running on 3000 port"))
+
+
+```
+
+here we have two middleware component one for get the original URL for the requesest and another one is to get the type of method which hit there.
+
+```ruby
+// Logging of original URL
+function logOriginalUrl (req, res, next) {
+    console.log('Request URL:', req.originalUrl)
+    next()
+  }
+
+
+  // Log methods
+  function logMethod (req, res, next) {
+    console.log('Request Type:', req.method)
+    next()
+  }
+```
+
+Now creating the array of two middleware here  as like below.
+
+```ruby
+  var logStuff = [logOriginalUrl, logMethod]
+```
+
+Plug that method which we need to attach that middle ware
+```ruby
+  app.get('/user/:id', *logStuff*, function (req, res, next) {
+    res.send('User Info')
+  })
+
+```
