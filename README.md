@@ -40,7 +40,7 @@ Create folder day1--> go folder by Cd command -> Now type
 it will ask you ceratin detail, either you can provide details or just click on enter.
 Now you can see the package.json file on the folder.
 5. Create file Index.js
-write ```rubyconsole.log("Hello world")``` in index.js. 
+write ```console.log("Hello world")``` in index.js. 
 6. Go to terminal window, go to day1 folderand type 
 > node index.
 you will get the output in terminal.
@@ -129,23 +129,25 @@ Some other global object are
 
 ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
 
-1.  You can know more details about expressjs from https://expressjs.com/<br />
+1.  You can know more details about expressjs from ```https://expressjs.com/```<br />
 
 2.  Tag of express Js is well suited "Fast, unopinionated, minimalist web framework for Node.js"<br />
 
 3.  install express by <br />
-// npm install express --save<br /><br />
+```ruby
+npm install express --save
+```
 
 
 4.  You can see the below code, previously when we have checked for http, it took many line of code to see in browser.<br />
 // you can get same code on expressjs website. <br /><br />
-
+```ruby
 const ex = require("express");<br />
 const app = ex();<br /><br />
 
 app.get('/', (req, res) => { res.send('Hello world'); })<br />
 app.listen("4000", () => console.log("Server is running on port 4000"));<br /><br />
-
+```
 
 4. With  expressJs you can create Web application, Middleware (API).<br />
 Which is easier to interagte with application.<br /><br />
@@ -155,7 +157,7 @@ Which is easier to interagte with application.<br /><br />
 // You can see how to handle the routing using the express JS like get/post<br />
 // you can see below for more details about routing.<br />
 // https://expressjs.com/en/starter/basic-routing.html<br /><br />
-
+```ruby
 <h3>Index.js </h3>
 
 ========================<br />
@@ -173,7 +175,7 @@ app.get('/Books', (req, res) => { res.send('Book selves'); })<br />
 app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })<br /><br />
 
 app.listen("4000", () => console.log("Server is running on port 4000"));<br />
-
+```
 
 # Day 11 -  Express App Generator
 
@@ -182,25 +184,25 @@ app.listen("4000", () => console.log("Server is running on port 4000"));<br />
 2. I installed the nodeJsexpression from node.js commond prompt.
 
 3. For more details about express applocation generation you can see the below URL.
-https://expressjs.com/en/starter/generator.html
+```https://expressjs.com/en/starter/generator.html```
 
 4. It provide the step by step way to do that.
 
 5. After installed it successfully, used below command to get the application template.
->express E:\node_tutorial\day11-ExpressAppGenerator
+```express E:\node_tutorial\day11-ExpressAppGenerator```
 
-6. Move to >cd E:\node_tutorial\day11-ExpressAppGenerator
+6. Move to ```cd E:\node_tutorial\day11-ExpressAppGenerator```
 
 7. Now run the application as below.
 
 8. Now get the template of pug instade of creating blank and default template.
->express --view=ejs E:\node_tutorial\day11-ExpressAppGenerator
+```express --view=ejs E:\node_tutorial\day11-ExpressAppGenerator```
 
 9. Than install all the packages
-> npm install
+```npm install```
 
 10. Now we run the application by.
-> SET DEBUG=day11-expressappgenerator:* & npm start
+``` SET DEBUG=day11-expressappgenerator:* & npm start ```
 
 11. It create all the structure of application which is required.
 a) Public -- Whch is work like assets folder having image, Script and style locations.
@@ -210,9 +212,9 @@ c) View -- All application view.
 12. To add any view or update the any view you need to check the view file.
 
 
-index.ejs
+<b>index.ejs </b>
 
-=========================
+```ruby
 
 <!DOCTYPE html>
 <html>
@@ -225,14 +227,13 @@ index.ejs
     <p><%= message %></p>
   </body>
 </html>
-====================
+```
  
  In above you can see the title and Message is binding dynamically and it is passing from the routes file.
  
  
- Routes/Index.js
- 
- ===========================
+ <b>Routes/Index.js </b>
+```ruby
  var express = require('express');
 var router = express.Router();
 
@@ -242,8 +243,7 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
-
-=============================
+```
 
 Here you can see the Title  is satya and Message is 'Welcome to NodeJs exress' 
 you can see it in browser as.
@@ -260,7 +260,7 @@ you can see it in browser as.
 3. If you will not include the middleware, it will not show the static file you included to project.
 
 4. Lets include express js in application similar way we did it on day 10
-// npm install express --save
+``` npm install express --save```
 
 5. Lets create folder starature with the name assets and having sub folder. <br/ >
 - Images : It contain images.
@@ -271,8 +271,7 @@ you can see it in browser as.
 7. Lets see HTML file structure with Image and CSS.
 
 <b>index.html </b>
-
-===========================
+```ruby
 html <br/>
 title<br/>
     My static Page
@@ -293,12 +292,12 @@ body<br/>
 /body<br/><br/>
 
 /html<br/>
-
+```
 8. Now include the middleware component in Index.js as below.
 
-Index.js
+<b>Index.js</b>
 
-======
+```ruby
 const ex = require("express");
 const app = ex();
 
@@ -310,6 +309,7 @@ app.get('/', (req, res) => { res.sendfile("index.html"); })
 
 
 app.listen("4000", () => console.log("Server is running on port 4000"));
+```
 
  9. Output you will get in the screen as.
  
@@ -325,11 +325,11 @@ app.listen("4000", () => console.log("Server is running on port 4000"));
 4. Routing refers how the and what values we can send to endpint URL trough client.
 5. Based on the endpoint input application will behave.
  You can also refer to below URL of express for more details.
- https://expressjs.com/en/guide/routing.html
+``` https://expressjs.com/en/guide/routing.html```
 
 6. The following code is an example of a very basic route. <br /><br />
 
-<b>
+```ruby
 var express = require('express')
 var app = express()
 
@@ -337,8 +337,7 @@ var app = express()
 app.get('/', function (req, res) {
   res.send('hello world')
 })
-
-</b><br /><br />
+```
 
 7. Mostly there are two way  method for roting Get and  post but it is allowing All also.
 
@@ -347,73 +346,72 @@ app.get('/', function (req, res) {
  b. The characters ?, +, *, and () are subsets of their regular expression counterparts
  c. The route path will match requests to about. <br />
 
-<b>
+```ruby
 app.get('/about', function (req, res) {
     res.send('about')
   })
-    
-</b><br /><br />
+```
   
 9. This route path will match acd and abcd. Either b or not.<br />
 
-<b>
+```ruby
 app.get('/ab?cd', function (req, res) {
     res.send('ab?cd')
   })
-</b><br /><br />
+```
   
- 10. This route path will match abcd, abxcd, abRANDOMcd, ab123cd, and so on.
+ 10. This route path will match ``` abcd, abxcd, abRANDOMcd, ab123cd, ``` and so on.
 front (ab) and last(cd) and in between any random text you can put.<br />
 
-<b>
+```ruby
 app.get('/ab*cd', function (req, res) {
     res.send('ab*cd')
   })
-</b><br /><br />
+```
   
  11. This route path will match abcd, abbcd, abbbcd, and so on. You can place mutiple time b.<br />
- <b>
+```ruby
  app.get('/ab+cd', function (req, res) {
     res.send('ab+cd')
   })
- </b><br /><br />
+```
  
  12.  <b>Route parameters</b>
  Passing the parameter on Route URL
  You need to define the Route URL like below.
  Input http://localhost:4000/users/50
- output {"userId":"50"}<br />
+ ```output {"userId":"50"}<br />```
  
- <b>
+```ruby
  app.get('/users/:userId', function (req, res) {
     res.send(req.params)
 })
-</b><br /><br />
+```
 
 13. If you want passing value whould not mandatory than you can use<br />
 
-<b>
+```ruby
 app.get('/users/:userId?', function (req, res) {
     res.send(req.params)
 })
-</b><br /><br />
+```
 
 14.  You can pass the mutiple paramnter on route URL as like below.
 Input http://localhost:4000/users/50/books/5
- Output {"userId":"50","bookId":"5"} <br />
+``` Output {"userId":"50","bookId":"5"}```
  
- <b>
+```ruby
  app.get('/users/:userId/books/:bookId', function (req, res) {
     res.send(req.params)
   })
- </b><br /><br />
+```
   
  15.  You can seperate the parameters also by using -
  Input value for that http://localhost:4000/flights/hyderabad-Cg
- output {"from":"hyderabad","to":"Cg"} <br />
+ ```output {"from":"hyderabad","to":"Cg"} ```
  
- <b>
+```ruby
  app.get('/flights/:from-:to', function (req, res) {
     res.send(req.params)
   })
-</b><br />
+```
