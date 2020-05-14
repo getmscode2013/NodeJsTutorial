@@ -160,24 +160,24 @@ Which is easier to interagte with application.<br /><br />
 - you can see below for more details about routing.<br />
 >https://expressjs.com/en/starter/basic-routing.html 
 
-```ruby
 <h3>Index.js </h3>
 
-========================<br />
-const ex = require("express");<br />
-const app = ex();<br />
+```ruby
 
-app.get('/', (req, res) => { res.send('Hello world'); })<br /><br />
+const ex = require("express");
+const app = ex();
 
-// like above you can defined with parameter<br />
-app.get('/Books', (req, res) => { res.send('Book selves'); })<br />
+app.get('/', (req, res) => { res.send('Hello world'); })
 
-// Above you can seen only te get methods, <br />
-// What happend if there is post method like below, Then you can not access from URL.<br />
-// You can either use postmn or Fiddler to check the post methods<br />
-app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })<br /><br />
+// like above you can defined with parameter
+app.get('/Books', (req, res) => { res.send('Book selves'); })
 
-app.listen("4000", () => console.log("Server is running on port 4000"));<br />
+// Above you can seen only te get methods, 
+// What happend if there is post method like below, Then you can not access from URL.
+// You can either use postmn or Fiddler to check the post methods
+app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })
+
+app.listen("4000", () => console.log("Server is running on port 4000"));
 ```
 
 ## Day 11 -  Express App Generator
@@ -194,15 +194,15 @@ app.listen("4000", () => console.log("Server is running on port 4000"));<br />
 - Open Installed Node Manager Command prompt.
 
 - Install Application Manager based on your template requirment
-like below we  use ejs  creating blank and default template.
+like below we  use ejs  creating blank and default template. <br />
 ```express --view=ejs E:\node_tutorial\day11-ExpressAppGenerator```
 
-- Open  application in visual studio Code.
+- Open  application in visual studio Code.<br />
 
 - Open Terminal and than install all the packages <br />
 ```npm install```
 
-- Now we run the application by.
+- Now we run the application by.<br />
 ``` SET DEBUG=day11-expressappgenerator:* & npm start ```
 
 5. It create all the structure of application which is required.
