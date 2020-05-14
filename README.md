@@ -21,9 +21,11 @@ c) Print − Prints the result.
 d) Loop − Loops the above command until the user presses ctrl-c twice.
 
 like 
+```ruby
 $ node
 > 1 + 3
 4 
+```
 
 4. Create the first application as Hellow world as.
 Create folder day1--> go folder by Cd command -> Now type
@@ -49,21 +51,22 @@ console.log(obj.name);
 
 2. anonymous method
 Function which is not having the name is called anonymous function.
-
+```ruby
 var v = function() 
 {
     console.log("this is anonymous function");
 }
 
 v();
+```
 
 3. Arrow function is based on arrow function keys
-
+```ruby
 var v = () =>     console.log("this is arrow function");
 v()
-
+```
 4. Multi line values Arrow function.
-
+```ruby
 var v = (a , b) => 
 {
     console.log("addition is :");
@@ -71,13 +74,14 @@ var v = (a , b) =>
 };
 
 v(2,3);
-
+```
 
 # Day 3 -  Global Object
  In NodeJs Global Object, Object which we can be access by any modules.
  
  We do not need to include these objects in our application, rather we can use them directly
  
+ ```ruby
  // __dirname : it use to check  the directive name.
 console.log(__dirname)
 
@@ -90,11 +94,13 @@ console.log("Satya")
 // Require : include any out side module in page.
 var requireTest = require("./requiretest");
 console.log(requireTest.abc);
+
+```
 Creating your own module.
 
 Requiretest.js
 
-========================================================
+```ruby
 // Arrow function is based on arrow function keys/
 
 const name = "Satya Rathore";
@@ -103,14 +109,14 @@ v1();
 
 module.exports.abc = name;
 
-========================================================
+```
 
 Some other global object are
 
-//buffer
-//module
-//Reports
-//Process
+-//buffer
+-//module
+-//Reports
+-//Process
 
 # Day 10 -  ExpressJs
 
