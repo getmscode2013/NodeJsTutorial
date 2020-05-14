@@ -45,7 +45,7 @@ write ```console.log("Hello world")``` in index.js.
 > node index.
 you will get the output in terminal.
 
-# Day 2 : Function Type
+## Day 2 : Function Type
 Lets move to day two when we will see the function type. its just basic of Java ECMA6 how we will define it.
 1. Define Objects.
 
@@ -83,7 +83,7 @@ var v = (a , b) =>
 v(2,3);
 ```
 
-# Day 3 -  Global Object
+## Day 3 -  Global Object
  In NodeJs Global Object, Object which we can be access by any modules.
  
  We do not need to include these objects in our application, rather we can use them directly
@@ -125,7 +125,7 @@ Some other global object are
 - //Reports
 - //Process
 
-# Day 10 -  ExpressJs
+## Day 10 -  ExpressJs
 
 ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
 
@@ -177,7 +177,7 @@ app.post('/Books/NewBook', (req, res) => { res.send('Book selves'); })<br /><br 
 app.listen("4000", () => console.log("Server is running on port 4000"));<br />
 ```
 
-# Day 11 -  Express App Generator
+## Day 11 -  Express App Generator
 
 1. Expression App generator is not directly working for me to Install from Terminal of Visual Studio Code.
 
@@ -251,7 +251,7 @@ you can see it in browser as.
 <img src="https://github.com/getmscode2013/NodeJsTutorial/blob/master/day11-ExpressAppGenerator/screen.png">
 
  
- # Day 12 -  Expressjs Inclusing Static Files
+ ## Day 12 -  Expressjs Inclusing Static Files
  
 1.  While creating the application we need to include  many Static files like Images, CSS , JS etc.
 
@@ -317,7 +317,7 @@ app.listen("4000", () => console.log("Server is running on port 4000"));
  
  
  
-  # Day 13 -  Basic Routing
+  ## Day 13 -  Basic Routing
   
 1. Go to the Day 10 before this 
 2. There you will get the basic idea how to install express by what is expressJS.
