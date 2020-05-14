@@ -40,10 +40,12 @@ you will get the output in terminal.
 Lets move to day two when we will see the function type. its just basic of Java ECMA6 how we will define it.
 1. Define Objects.
 
+```ruby
 var obj =  {name : "satya", phoneNo : 1234567890, email : "Test@gmail.com"}
 
 console.log(obj);
 console.log(obj.name);
+```
 
 2. anonymous method
 Function which is not having the name is called anonymous function.
