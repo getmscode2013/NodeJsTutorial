@@ -149,14 +149,15 @@ app.get('/', (req, res) => { res.send('Hello world'); })<br />
 app.listen("4000", () => console.log("Server is running on port 4000"));<br /><br />
 ```
 
-4. With  expressJs you can create Web application, Middleware (API).<br />
+5. With  expressJs you can create Web application, Middleware (API).<br />
 Which is easier to interagte with application.<br /><br />
 
 
-5.  Basic routing :<br />
-// You can see how to handle the routing using the express JS like get/post<br />
-// you can see below for more details about routing.<br />
->https://expressjs.com/en/starter/basic-routing.html
+6.  Basic routing :<br />
+- You can see how to handle the routing using the express JS like get/post<br />
+- you can see below for more details about routing.<br />
+>https://expressjs.com/en/starter/basic-routing.html 
+<br/>
 ```ruby
 <h3>Index.js </h3>
 
@@ -188,31 +189,28 @@ app.listen("4000", () => console.log("Server is running on port 4000"));<br />
 
 4. It provide the step by step way to do that.
 
-5. After installed it successfully, used below command to get the application template.
-```express E:\node_tutorial\day11-ExpressAppGenerator```
+- Open Installed Node Manager Command prompt.
 
-6. Move to ```cd E:\node_tutorial\day11-ExpressAppGenerator```
-
-7. Now run the application as below.
-
-8. Now get the template of pug instade of creating blank and default template.
+- Install Application Manager based on your template requirment
+like below we  use ejs  creating blank and default template.
 ```express --view=ejs E:\node_tutorial\day11-ExpressAppGenerator```
 
-9. Than install all the packages
+- Open  application in visual studio Code.
+
+- Open Terminal and than install all the packages <br />
 ```npm install```
 
-10. Now we run the application by.
+- Now we run the application by.
 ``` SET DEBUG=day11-expressappgenerator:* & npm start ```
 
-11. It create all the structure of application which is required.
-a) Public -- Whch is work like assets folder having image, Script and style locations.
-b) Routes -- It contain the defination of all rotings.
-c) View -- All application view.
+5. It create all the structure of application which is required.
+  a) Public -- Whch is work like assets folder having image, Script and style locations. <br />
+  b) Routes -- It contain the defination of all rotings. <br />
+  c) View -- All application view. <br />
 
-12. To add any view or update the any view you need to check the view file.
+6. To add any view or update the any view you need to check the view file.
 
-
-<b>index.ejs </b>
+>index.ejs
 
 ```ruby
 
