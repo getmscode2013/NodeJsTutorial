@@ -21,11 +21,11 @@ npm -v
 > node
 ```
 
-It will open the Online REPL Terminal
-a) Read − Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
-b) Eval − Takes and evaluates the data structure.
-c) Print − Prints the result.
-d) Loop − Loops the above command until the user presses ctrl-c twice.
+It will open the Online REPL Terminal<br/>
+- Read − Reads user's input, parses the input into JavaScript data-structure, and stores in memory.
+- Eval − Takes and evaluates the data structure.
+- Print − Prints the result.
+- Loop − Loops the above command until the user presses ctrl-c twice.
 
 like 
 ```ruby
@@ -36,13 +36,13 @@ $ node
 
 4. Create the first application as Hellow world as.
 Create folder day1--> go folder by Cd command -> Now type
->npm init
+>npm init <br/>
 it will ask you ceratin detail, either you can provide details or just click on enter.
 Now you can see the package.json file on the folder.
 5. Create file Index.js
 write ```console.log("Hello world")``` in index.js. 
 6. Go to terminal window, go to day1 folderand type 
-> node index.
+>node index <br/>
 you will get the output in terminal.
 
 ## Day 2 : Function Type
@@ -156,7 +156,7 @@ Which is easier to interagte with application.<br /><br />
 5.  Basic routing :<br />
 // You can see how to handle the routing using the express JS like get/post<br />
 // you can see below for more details about routing.<br />
-// https://expressjs.com/en/starter/basic-routing.html<br /><br />
+>https://expressjs.com/en/starter/basic-routing.html
 ```ruby
 <h3>Index.js </h3>
 
