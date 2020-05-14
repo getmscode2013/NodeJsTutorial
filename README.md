@@ -7,7 +7,7 @@
 5. Node.js is born on 2009.
 6. The first form of npm is created 2010.
 
-# Day 1 : Hello world
+## Day 1 : Hello world
 1. Check the nodejs installation with version by.
 ```ruby 
 node -v
@@ -272,26 +272,26 @@ you can see it in browser as.
 
 <b>index.html </b>
 ```ruby
-html <br/>
-title<br/>
+<html>
+<title>
     My static Page
-/title<br/>
+<title>
 
-head<br/>
-    link rel="stylesheet" href="/Css/style.css"<br/>
-/head<br/><br/>
+<head>
+    <link rel="stylesheet" href="/Css/style.css">
+</head>
 
-body<br/>
-    table<br/>
-        tr<br/>
-            td class="tableBody"   images about the timer control /td<br/>
-            td  img src="/images/iconfinder_tower_748987.png" width=100 /td<br/>
-        /tr<br/>
-    /table<br/><br/>
+<body>
+    <table>
+       <tr>
+            <td class="tableBody"   images about the timer control </td>
+            <td  img src="/images/iconfinder_tower_748987.png" width=100 </td>
+        </tr>
+    </table>
    
-/body<br/><br/>
+</body>
 
-/html<br/>
+</html>
 ```
 8. Now include the middleware component in Index.js as below.
 
