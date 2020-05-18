@@ -45,6 +45,8 @@ day11-ExpressAppGenerator/node_modules/
 day12-StaticFiles/node_modules/
 day13-BasicRouting/node_modules/
 day14-Middleware/node_modules/
+day15-BodyParsingMiddleware/node_modules/
+day16-ExpressValidatorMiddleWare/node_modules/
 
 # TypeScript v1 declaration files
 typings/

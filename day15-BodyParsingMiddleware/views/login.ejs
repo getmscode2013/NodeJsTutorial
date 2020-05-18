@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <form method="post">
+    <h1><%= title %></h1>
+  <table>
+      <tr>
+          <td colspan="2" style="text-align: center" >
+              <%= message %>
+          </td>
+        </tr>
+    <tr>
+      <td>Name </td> <td><input name="username" type="text" /> </td>
+    </tr>
+    <tr>
+      <td>Password </td> <td><input name="password" type="password" /> </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center" >
+      <button type="submit" value="Submit">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+
+</html>
