@@ -154,9 +154,14 @@ v();
 ```
 Diffrence in Var and Let
 
+
 |Var 		   		         	| let 					|
 | --------------------------------------------------------------------------|--------------------------------------------------------------------------- |
-|variables belong to the global scope or local scope  if they are declared inside a function: var counter;| The let variables are blocked scopes: let counter;				 |
+|variables belong to the global scope or local scope  if they are declared 
+inside a function: var counter;| The let variables are blocked scopes: let counter;				 |
+|var variables are added to the global object as properties. 
+The global object is window on the web browser and global on Node.js: |However, the let variables are not added to the global object|
+|The var keyword allows you to redeclare a variable without any issue.| If you redeclare a variable with the let keyword, you will get an error|
 
 ## Day 10 -  ExpressJs
 
