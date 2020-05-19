@@ -131,8 +131,7 @@ ECMA  was created to standardize JavaScript to help foster multiple independent 
 The full form of ECMA is European Computer Manufacturer's Association.A standard for scripting languages like JavaScript, JScript is ECMAScript.
 
 Here NodeJS follow the ECMA standard, here we are going to dicuss about Const, Let and class.
-
-Unlike variables declared with var that are function-scoped, variables declared with let are block-scoped: they only exist in the block they are defined in.
+> <b>let :</b>  Unlike variables declared with var that are function-scoped, variables declared with let are block-scoped: they only exist in the block they are defined in.
 
 ```ruby
 var a = 20
@@ -152,7 +151,7 @@ var v = () => {
 v();
 
 ```
-Diffrence in Var and Let
+Difference in Var and Let
 
 
 |Var 		   		                            | let 					                                    |
@@ -160,6 +159,106 @@ Diffrence in Var and Let
 |variables belong to the global scope or local scope  if they are declared  inside a function: var counter;| The let variables are blocked scopes: let counter;				 |
 |var variables are added to the global object as properties. The global object is window on the web browser and global on Node.js: |However, the let variables are not added to the global object|
 |The var keyword allows you to redeclare a variable without any issue.| If you redeclare a variable with the let keyword, you will get an error|
+
+
+> <b>Const :</b>  Variables defined with const behave like let variables, except they cannot be reassigned. <br />
+
+If we assign a primitive value to a constant, we cannot change the primitive value: 
+
+
+```ruby
+const a = 30;
+//a = 40; // you can not assign the a to another value
+
+console.log(a);
+
+```
+
+You can change the properties of a constant object:
+
+```ruby
+
+// but if you defined the object and want to change the value of it tha you can do that
+
+const obj =  {name : "satya", phoneNo : 1234567890, email : "Test@gmail.com"}
+
+console.log(obj);
+
+obj.age = 20;
+console.log(obj);
+
+obj.phoneNo = 1234512345;
+console.log(obj);
+```
+> <b>Class :</b>  Its type of function, but instead of using function keyword to initiate it, here use the keyword class, and the properties are assigned inside a constructor() method. <br />
+
+```ruby
+class TestUserClass 
+{
+    constructor()
+    {
+        this.name = "Satya first ";
+        this.phoneNumber = "6776777"
+    }
+
+    getName()
+    {
+        //console.log(name); // this will give error to access any of the class values you need to use thi.
+        console.log(this.name);
+        this.age = 12
+        return this.name;
+    }
+
+    getAge()
+    {
+        return this.age;
+    }
+}
+
+
+var tc = new TestUserClass();
+//tc.getName();
+console.log(tc.getAge()); // you need to call the Get name first as the Age setting their.
+```
+
+## Day 5 -  Prototype
+
+In the previous chapter we learned how to use an object constructor.
+
+Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+Sometimes you want to add new properties (or methods) to an object constructor.
+
+Prototype property  in Javascript allows you to add new properties to object constructors.
+
+``` ruby
+// prototype usese to extend the functionalty of exiting function.
+
+var Employee = function()
+{
+this.name = "Satya";
+this.age = 30;
+
+
+}
+
+
+var e =  new Employee();
+console.log(e.age);
+
+Employee.prototype = {
+    phoneNumber : "4545454",
+
+    GetAge : function()
+    {
+        return this.name;
+    }
+}
+
+var e =  new Employee();
+console.log(e.age);
+console.log(e.phoneNumber);
+console.log(e.GetAge());
+```
 
 ## Day 10 -  ExpressJs
 
