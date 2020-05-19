@@ -260,6 +260,58 @@ console.log(e.phoneNumber);
 console.log(e.GetAge());
 ```
 
+## Day 6 -  Modules
+
+1. Instead of keeping all the code in one file we split the code into multiple file. 
+2. To splitting the file into mutiple file we defined it as modules.
+3. You can create your own modules, and easily include them in your applications.
+4. It will be useful for code resuability and for maintability. <br /><br />
+
+Creating a samall calculator with is having addition, substartion and defined all in different file<br />
+
+<b> addition.js </b>
+
+```ruby
+// Addition module which need to export.
+
+module.exports = {
+
+    Addition : function(a,b)
+    {
+        return a + b;
+    }
+
+}
+```
+
+<b> subtration.js </b>
+
+```ruby
+// you can define the modules like that as well as.
+// We define modules into two type.
+
+var subtration = function(a,b)
+{
+    return a -b;
+}
+
+module.exports.subtration = subtration;
+```
+
+<b> Calculator.js </b> < br/>
+Need to use require to export the module.
+
+```ruby 
+// exporting both of the module using require.
+
+var add = require("./addition");
+var sub = require("./subtration");
+
+console.log(`Addition  of number 10 and 12 : ${add.Addition(10, 12)}`);
+console.log(`Subtration  of number 14 and 12 :  ${sub.subtration(14, 12)}`);
+```
+
+
 ## Day 10 -  ExpressJs
 
 ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
