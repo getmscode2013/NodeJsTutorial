@@ -529,3 +529,47 @@ Plug that method which we need to attach that middle ware
   })
 
 ```
+
+  ## Day 17 -  NestJs
+  
+```https://docs.nestjs.com/``` <br />
+- It is used to build serverside application microservices and RestAPI.
+- It is proper framework like Asp.net, Django. It is provide you the architecture to build a server.
+- It is Extensible, Versatile and prograssive javascript.
+- If you are working with NestJs, type script is the default module. If you have worked with angular than NEST js is pretty similar.
+- Nest makes use of robust HTTP Server frameworks like Express (the default) and optionally can be configured to use Fastify as well!
+- Nest provides an out-of-the-box application architecture which allows developers and teams to create highly testable, scalable, loosely coupled, and easily maintainable applications.
+
+```https://docs.nestjs.com/techniques/database``` <br />
+```https://docs.nestjs.com/recipes/sql-typeorm``` <br/>
+- Nest is database agnostic, allowing you to easily integrate with any SQL or NoSQL database
+- You can also directly use any general purpose Node.js database integration library or ORM,
+- Nest provides tight integration with TypeORM and Sequelize out-of-the-box with the @nestjs/typeorm and @nestjs/sequelize packages respectively, @nestjs/mongoose package for mango DB.
+
+```https://docs.nestjs.com/techniques/authentication```
+- Passport is the most popular node.js authentication library, well-known by the community and successfully used in many production applications. It's straightforward to integrate this library with a Nest application using the @nestjs/passport module
+At a high level, Passport executes a series of steps to:
+a) Authenticate a user by verifying their "credentials" (such as username/password, JSON Web Token (JWT), or identity token from an Identity Provider)
+b)Manage authenticated state (by issuing a portable token, such as a JWT, or creating an Express session)
+c)Attach information about the authenticated user to the Request object for further use in route handlers
+
+```https://docs.nestjs.com/techniques/logger``` <br />
+- Nest comes with a built-in text-based logger which is used during application bootstrapping and several other circumstances such as displaying caught exceptions (i.e., system logging). This functionality is provided via the Logger class in the @nestjs/common package. 
+
+```https://docs.nestjs.com/techniques/performance``` <br />
+- Nest also provides compatibility with other libraries such as, for example, Fastify. 
+Fastify provides a good alternative framework for Nest because it solves design issues in a similar manner to Express. However, fastify is much faster than Express, achieving almost two times better benchmarks results.
+
+```https://docs.nestjs.com/graphql/quick-start``` <br />
+- Harnessing the power of TypeScript & GraphQL.
+GraphQL is a powerful query language for APIs and a runtime for fulfilling those queries with your existing data. It's an elegant approach that solves many problems typically found with REST APIs.
+- GraphQL queries access not just the properties of one resource but also smoothly follow references between them. While typical REST APIs require loading from multiple URLs, GraphQL APIs get all the data your app needs in a single request. Apps using GraphQL can be quick even on slow mobile network connections.
+
+```https://docs.nestjs.com/microservices/basics``` <br />
+- Nest natively supports the microservice architectural style of development.In Nest, a microservice is fundamentally an application that uses a different transport layer than HTTP.
+Nest supports several built-in transport layer implementations, called transporters, which are responsible for transmitting messages between different microservice instances. Most transporters natively support both request-response and event-based message styles. 
+It uses package @nestjs/microservices.
+
+```https://docs.nestjs.com/fundamentals/testing``` <br />
+- Automated testing is considered an essential part of any serious software development effort. It is provides integration with Jest and Supertest out-of-the-box, while remaining agnostic to testing tools.
+  
