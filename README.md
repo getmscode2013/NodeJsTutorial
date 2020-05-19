@@ -125,6 +125,39 @@ Some other global object are
 - //Reports
 - //Process
 
+## Day 4 -  ECMA Script
+
+ECMA  was created to standardize JavaScript to help foster multiple independent implementations.
+The full form of ECMA is European Computer Manufacturer's Association.A standard for scripting languages like JavaScript, JScript is ECMAScript.
+
+Here NodeJS follow the ECMA standard, here we are going to dicuss about Const, Let and class.
+
+Unlike variables declared with var that are function-scoped, variables declared with let are block-scoped: they only exist in the block they are defined in.
+
+```ruby
+var a = 20
+var a = 30;
+
+console.log(a);
+
+let x = 20;
+x = "satya"; /// but you can change the datatype
+//let x = 30; /// if you will defined like that it will give error
+
+console.log(x);
+var v = () => {
+    let x = 50;   /// here again you can defined it and it will work like scoped variable.
+    console.log(x);
+}
+v();
+
+```
+Diffrence in Var and Let
+
+|Var 		   		         	| let 					|
+| --------------------------------------------------------------------------|--------------------------------------------------------------------------- |
+|variables belong to the global scope or local scope  if they are declared inside a function: var counter;| The let variables are blocked scopes: let counter;				 |
+
 ## Day 10 -  ExpressJs
 
 ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
