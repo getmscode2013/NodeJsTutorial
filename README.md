@@ -784,12 +784,12 @@ e.g. nest new day18-NestIntro <br />
 Tt will ask for which package manager you want yo use for. I have chossen npm. Now it will install all th dependent packages. <br />
 It takes 5 - 10 minute to install successfully.
 
-<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/NestPackaesInstalledsuccessfully.png">
+<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/helperimage/NestPackaesInstalledsuccessfully.png">
 
 7) Now open your application in visual studio code.
 a) now to see the diffrnce on the icon you can install extension "Material Icon Theme"
 b) so lets see the application structure.
-<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/projectstructure.png">
+<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/helperimage/projectstructure.png">
 
  -<u> Node_module </u> - consist all the package installed for application. - you can get details from package.json.
 - <u>Src </u> - is the mail folder on which we will work its contains all the source files.
@@ -886,7 +886,7 @@ Now let run and see the application. <br />
 or to run with nodemon  <br />
 > npm run start:dev <br />
 
-<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/helloworld.png">
+<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/helperimage/helloworld.png">
 
 it is showing "hello world" it is giving the result of string from service.<br />
 Lets change it to some of the JSON values. Changes in controller directly with below code.<br />
@@ -902,7 +902,7 @@ export class AppController {
 }
 ```
 
-<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/jsonoutput.png">
+<img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/helperimage/jsonoutput.png">
 
 You can even define the heder also for your API you need to import header.
 
