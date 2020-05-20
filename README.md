@@ -760,7 +760,7 @@ It uses package @nestjs/microservices.
 ```https://docs.nestjs.com/fundamentals/testing``` <br />
 - Automated testing is considered an essential part of any serious software development effort. It is provides integration with Jest and Supertest out-of-the-box, while remaining agnostic to testing tools.
   
-## Day 18 -  NestJs-into (hello world)
+## Day 18 -  NestJs-intro (hello world)
     
 1. It is mainly used to create Rest API, a NodeJS framework, builds on ExpressJs.
 2. Embraces TypeScript, dependency Injection and Modularity("Angular for Backend")
@@ -769,19 +769,19 @@ It uses package @nestjs/microservices.
 5. Makes building complex application easy.
 
 
-6. Lets install NestJs first.
+6. Lets install NestJs first. <br />
+https://docs.nestjs.com/first-steps <br />
 
-https://docs.nestjs.com/first-steps
-a) Open ```NodeJs command``` promt.
+a) Open ```NodeJs command``` promt. <br />
 Setting up a new project is quite simple with the Nest CLI. With npm installed. [It is similar to angular installation]
- <br>
+ <br />
 b) ```npm i -g @nestjs/cli```
 
-c) Create new project using NEST
-```nest new project-name```
-e.g. nest new day18-NestIntro
+c) Create new project using NEST <br />
+```nest new project-name``` <br />
+e.g. nest new day18-NestIntro <br />
 
-it will ask for which package manager you want yo use for. I have chossen npm. Now it will install all th dependent packages.
+Tt will ask for which package manager you want yo use for. I have chossen npm. Now it will install all th dependent packages. <br />
 It takes 5 - 10 minute to install successfully.
 
 <img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/NestPackaesInstalledsuccessfully.png">
@@ -791,40 +791,40 @@ a) now to see the diffrnce on the icon you can install extension "Material Icon 
 b) so lets see the application structure.
 <img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/projectstructure.png">
 
- - Node_module - consist all the package installed for application. - you can get details from package.json.
-- Src - is the mail folder on which we will work its contains all the source files.
-- Test - it is nothing but test setup for application. by default in jest.
-- .gitignore file - is file used to ignore the git  uploads.
-- nest-cli.json  file - It is nest configuration file.
-- package.json - contain all the installed module definations.
-- tsconfig.json - is type script configuratio files.
+ -<u> Node_module </u> - consist all the package installed for application. - you can get details from package.json.
+- <u>Src </u> - is the mail folder on which we will work its contains all the source files.
+- <u>Test </u> - it is nothing but test setup for application. by default in jest.
+- <u>.gitignore file</u> - is file used to ignore the git  uploads.
+- <u> nest-cli.json </u>  file - It is nest configuration file.
+- <u> package.json </u> - contain all the installed module definations.
+- <u> tsconfig.json </u>- is type script configuratio files.
 
 c) let see what we have in src.
 
-- <b> main.ts <b/> - its entry point for application. nodejs not run typescript so code compile to javascript. 
-if you will se the code here it is follow like expressJS.
+- <b> main.ts </b> - its entry point for application. nodejs not run typescript so code compile to javascript.  <br />
+if you will se the code here it is follow like expressJS. <br />
 Creating the server and which will work on 3000 port.
 ```ruby
  const app = await NestFactory.create(AppModule);
   await app.listen(3000);
 ```
 - <b>app.module.ts </b>
-Nest is written the application in the moduler form like angular.
+Nest is written the application in the moduler form like angular.<br />
 As in above its written NEST is embraces modularity.  Nest is not taken all the files in your working folder. it will take only which has imported their. <br />
-Imported part in NESTJs is controller and provide. As you need to list over here.
+Imported part in NESTJs is controller and provide. As you need to list over here.<br />
     ```ruby
  controllers: [AppController], // bundle of controller
   providers: [AppService], // bundle of services
     ```
 
-> Controller : it is responsible to get the comming request and doing something and response it back.
-> Provider : it will inject the certain functionlaity to controller. it like service of database to get the data from database.
+> Controller : it is responsible to get the comming request and doing something and response it back.<br />
+> Provider : it will inject the certain functionlaity to controller. it like service of database to get the data from database. <br />
 
 here you can see the ``` @module``` as the decorator which is attched to the class.
 
 
 - <b> app.controller.ts - </b>
-It is app class as AppController which is decorated by @controller. 
+It is app class as AppController which is decorated by @controller. <br />
 It is having method of getHello() decorated by @Get
 in Appcontroller you will find the code like below.
 
@@ -832,7 +832,7 @@ in Appcontroller you will find the code like below.
 @Controller()
 export class AppController {
 ```
-Means it will accept the empty parameter like
+Means it will accept the empty parameter like<br />
 your-domain.com/
 
 if you have the parameter in controller like user
@@ -840,7 +840,7 @@ if you have the parameter in controller like user
 @Controller('user')
 export class AppController {
 ```
-you need to use it like your-domain.com/user
+you need to use it like your-domain.com/user<br />
 
 Same happan for the get also if it is like
 ```ruby
@@ -865,31 +865,31 @@ this service should be registerd in the module. here you are declaring ut and us
 this.appService.getHello();
 ```
 
--<b> app.service.ts </b>
+-<b> app.service.ts </b> <br />
 
-All your login aout the application or DB call are written to the service.
-It is using @Injectable decorator code for AppService class.  And defined a method like getHello in service.
+All your login aout the application or DB call are written to the service.<br />
+It is using @Injectable decorator code for AppService class.  And defined a method like getHello in service.<br />
 ```ruby
 getHello(): string {
     return 'Hello World!';
   }
 ```
-Here you can write your complex logic.
+Here you can write your complex logic.<br />
 
 - <b>app.controller.spec.ts </b>
-It used to write the unit test methods for app.controller
+It used to write the unit test methods for app.controller<br /><br />
 
 8) Run application
-Now let run and see the application.
-> cd day18-nest-intro
-> npm run start
-or to run with nodemon 
-> npm run start:dev
+Now let run and see the application. <br />
+> cd day18-nest-intro <br />
+> npm run start<br />
+or to run with nodemon  <br />
+> npm run start:dev <br />
 
 <img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/helloworld.png">
 
-it is showing "hello world" it is giving the result of string from service.
-Lets change it to some of the JSON values. Changes in controller directly with below code.
+it is showing "hello world" it is giving the result of string from service.<br />
+Lets change it to some of the JSON values. Changes in controller directly with below code.<br />
 
 ```ruby
 export class AppController {
@@ -905,9 +905,13 @@ export class AppController {
 <img src="https://github.com/getmscode2013/NodeJsTutorial/day18-nest-intro/jsonoutput.png">
 
 You can even define the heder also for your API you need to import header.
+
+```ruby
 import { Controller, Get, Header } from '@nestjs/common';
+```
 
 and add the decorator @Hedader like below.
+
 ```ruby
  @Get()
   @Header("Content-type",'test/html')
