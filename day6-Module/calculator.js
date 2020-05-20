@@ -3,7 +3,7 @@
 // It will be useful for code resuability nd for maintability.
 
 
-// Creating a samall calculator with is having addition, substartion and defined all in diffrent file
+// Creating a samall calculator with is having addition, substartion and defined all in different file
 // Need to use require to export the module.
 
 var add = require("./addition");

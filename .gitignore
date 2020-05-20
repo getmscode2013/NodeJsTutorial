@@ -47,6 +47,7 @@ day13-BasicRouting/node_modules/
 day14-Middleware/node_modules/
 day15-BodyParsingMiddleware/node_modules/
 day16-ExpressValidatorMiddleWare/node_modules/
+day18-nest-intro/node_modules/
 
 # TypeScript v1 declaration files
 typings/
