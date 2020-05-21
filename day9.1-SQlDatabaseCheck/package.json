@@ -1,0 +1,16 @@
+{
+  "name": "day9.1-sqldatabasecheck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "msnodesqlv8": "^1.1.5",
+    "mssql": "^3.3.0",
+    "node-mssql": "0.0.1"
+  }
+}

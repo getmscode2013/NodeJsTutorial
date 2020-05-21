@@ -40,6 +40,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+day9.1-expressTest/node_modules/
 day10-expressTest/node_modules/
 day11-ExpressAppGenerator/node_modules/
 day12-StaticFiles/node_modules/
