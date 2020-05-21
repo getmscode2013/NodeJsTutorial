@@ -382,12 +382,11 @@ Than in package.json write the followings <br/>
     "server": "nodemon server.js"
   },
   ```
-Now in terimnal check for.
+Now in terimnal check for.<br/>
 
-```ruby
-npm run server
-npm run server Index.js
-```
+> npm run server <br/>
+> npm run server Index.js
+
 
 
 
