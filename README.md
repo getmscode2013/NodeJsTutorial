@@ -386,7 +386,7 @@ Now in terimnal check for.
 
 ```ruby
 npm run server
-npm run server HttpNodemon.js
+npm run server Index.js
 ```
 
 
