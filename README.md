@@ -311,6 +311,86 @@ console.log(`Addition  of number 10 and 12 : ${add.Addition(10, 12)}`);
 console.log(`Subtration  of number 14 and 12 :  ${sub.subtration(14, 12)}`);
 ```
 
+## Day 7 -  HttpModules
+
+1.  Node js are providing some of the inbuild module which we help to devlop Node apllication.<br />
+2.  Http module is one of inbuild module which will help to create web server for web application.<br />
+3.  It will help to see the output in browser<br /><br />
+
+4. Importing the http module <br />
+```ruby
+const http = require('http')
+``` 
+
+5. Now yoou need to create the server, with the input  paramter of function of req and res. <br />
+```ruby
+// create the server which will take input of req and output as rs
+http.createServer(function(req, res){ 
+
+```
+6. At the end you can mention on which port it will listen.
+
+```ruby
+}).listen(4000, () => console.log("Your application is running on Port 4000"));
+```
+
+7. At the end you can see the full code where we can write it like.
+```ruby
+// Importing the http module
+const http = require('http')
+
+// create the server which will take input of req and output as rs
+http.createServer(function(req, res){
+
+
+// Adding requst header
+res.writeHead(200, {'Content-Type': 'text/html'});
+
+// Pass query string in URL localhost:4000/123
+var qs = req.url;
+
+res.write("<h1>hello Satya<h1>" + qs);
+
+// you need to complete the response here.
+res.end();
+
+}).listen(4000, () => console.log("Your application is running on Port 4000"));
+```
+8. you can stop server using ctrl + c
+
+### Nodemon
+
+1. In above code if you are changing anything in code you to stop server and rerun again.
+2. To avoid thatyou need to install nodemon. 
+3 Nodemon is a utility that will monitor for any changes in your source and automatically restart your server
+4. Just use nodemon instead of node to run your code, and now your process will automatically restart when your code changes. 
+5. Installing nodemon
+> npm install -g nodemon <br />
+
+run the node application <br />
+
+> nodemon index.js <br/>
+
+<b>***If above will not work follow the below process</b> <br/>
+
+First,Install Nodemon as ``` npm install --save nodemon ```  <br/>
+
+Than in package.json write the followings <br/>
+
+```ruby
+"scripts": {
+    "server": "nodemon server.js"
+  },
+  ```
+Now in terimnal check for.
+
+```ruby
+npm run server
+npm run server HttpNodemon.js
+```
+
+
+
 
 ## Day 10 -  ExpressJs
 
