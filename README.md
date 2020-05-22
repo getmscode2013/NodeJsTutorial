@@ -484,6 +484,96 @@ console.log("File read successfully");
 ## Day 9.0 -  Events 
 ###No Update...
 
+## Day 9.1 : Nodejs connection to SQL
+
+In this session i am going to demonstrate how we can connect to database.
+
+1. I am taking the example of how we can connect to SQL database.
+2. First you need to take the refrence of MSDatabase.
+3. For more details you will get on below link. <br/>
+https://www.npmjs.com/package/node-mssql - it is old ways<br/>
+4. Or by using mssql,  For more details you can see below link.<br/>
+https://www.npmjs.com/package/mssql <br/>
+Install mssql package like below
+```ruby
+npm install mssql
+```
+
+5. You need to enable  sql Network services from services.msc. <br/>
+
+6. Enable tcp/ip protocol as mentioned in below link of your system. <br/>
+https://stackoverflow.com/questions/25577248/node-js-mssql-tedius-connectionerror-failed-to-connect-to-localhost1433-conn
+
+7. Restart your system to see the effect of changes. <br/>
+8. Import MSSQL to application. <br/>
+```ruby
+var sql = require('mssql');
+```
+9. Create the configuration for DB connection.
+```ruby
+const config = {
+    user: 'sa',
+    password: 'password1',
+    server: 'REETPC', // You can use 'localhost\\instance' to connect to named instance
+    database: 'test12',
+}
+```
+
+10. Inserting records to the database
+``` ruby
+sql.connect(config).then(pool => {
+    
+    return pool.request()
+        .input('CustName', sql.VarChar(50), "satya")
+        .input('Phonenumber', sql.VarChar(10), "45677889")
+        .input('Age', sql.Int, 23)
+        // You can either insert records by  hard code query
+        //.query("INSERT INTO [test12].[dbo].[Customer]  ([CustName] ,[Phonenumber] ,[Age])   VALUES(  @CustName,  @Phonenumber,   @Age)")
+        
+        // OR you can write a store procedure and call that 
+         .execute('InsertCustomer',)
+        // .output('output_parameter', sql.VarChar(50))
+}).then(result => {
+    console.dir(result)
+}).catch(err => {
+    console.log(err);
+})
+
+```
+
+11. Here is the way you can use to  get the records  using hard coded query
+```ruby
+sql.connect(config).then(() => {
+    return sql.query`select * from [dbo].[Customer]`
+}).then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err);
+})
+```
+
+12. Fetch the result using store procedure.
+```ruby
+sql.connect(config).then(pool => {
+    return pool.request().execute("GetAllCustomer")
+}).then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err);
+})
+```
+
+13. Fetch the selected result using store procedure.
+```ruby
+sql.connect(config).then(pool => {
+    return pool.request().input('Customerid', sql.Int, 2).execute("GetCustomerbyId")
+}).then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err);
+})
+```
+
 ## Day 10 -  ExpressJs
 
 ExpressJs use to build the Node Application, it make faster the devlopment and provide inbuild code for development.<br /><br />
