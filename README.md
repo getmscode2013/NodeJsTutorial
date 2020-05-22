@@ -388,8 +388,101 @@ Now in terimnal check for.<br/>
 > npm run server Index.js
 
 
+## Day 8 -  Filesystem
+1. File system is use to read and print the content of file.
+2. The Node File System (fs) module can be imported using the following syntax
+
+```ruby
+var fs = require("fs")
+```
+3. You can read it using the arrow function like below.
+
+```ruby
+fs.readFile(__dirname + "\\dummyfile.txt","utf-8",(err, data) =>
+{
+    if(err) throw err;
+    console.log(data);
+});
+```
+4. You can write the data to the file
+```ruby
+fs.writeFile('dummyfile.txt', 'Learn Node js in step by step', function(err) {
+    if (err) {
+       return console.error(err);
+    }
+});
+```
+
+### Read HTML File
+You can use the same process to read the HTML files also.
+
+You need to import both fs - file sysem and HTTP to create the server.
+```ruby
+const fs = require("fs");
+const http = require("http");
+```
+
+Now you need to create the server to see that file into browser and read that file using the fs as like below.
+
+```ruby
+const server = http.createServer((req, res) => {
+
+fs.readFile("myfirstpage.html","utf-8", (err, data) => 
+{
+    if(err) throw err;
+    res.writeHead(200, {"content-type":"text/html"});
+    res.write(data)
+    res.end();
+})
 
 
+}).listen("4000", console.log("Website is running on 4000 port."));
+```
+### Read file synchronously 
+
+1. The way we were reading the file is asnyc.<br/>
+2. NodeJs provide both the way to read the file, async and sync. <br/>
+
+> Async Method <br/>
+Here out will first print :  File Read Successfully  Than content of file.
+
+```ruby
+const fs = require("fs");
+
+fs.readFile("dummyfile.txt","utf-8",(err, data) =>
+{
+    if(err) throw err;
+    console.log(data);
+});
+
+console.log("++++++++++++++");
+console.log("File read successfully");
+```
+
+> Sync method. <br />
+a. In Async method we have call back but in Sync method we dont have call back. <br />
+b.  Better to keep it in try catch to catch the exception.<br />
+c.  Here first file data will print and then "File read successfully". <br />
+
+``` ruby
+const fs = require("fs");
+
+try
+{
+var data = fs.readFileSync("dummyfile.txt","utf-8")
+console.log(data);
+}
+catch(e)
+{
+    throw e;
+}
+
+console.log("++++++++++++++");
+console.log("File read successfully");
+```
+
+## Day 9.0 -  Events 
+###No Update...
 
 ## Day 10 -  ExpressJs
 
