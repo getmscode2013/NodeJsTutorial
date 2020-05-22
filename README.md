@@ -311,6 +311,268 @@ console.log(`Addition  of number 10 and 12 : ${add.Addition(10, 12)}`);
 console.log(`Subtration  of number 14 and 12 :  ${sub.subtration(14, 12)}`);
 ```
 
+## Day 7 -  HttpModules
+
+1.  Node js are providing some of the inbuild module which we help to devlop Node apllication.<br />
+2.  Http module is one of inbuild module which will help to create web server for web application.<br />
+3.  It will help to see the output in browser<br /><br />
+
+4. Importing the http module <br />
+```ruby
+const http = require('http')
+``` 
+
+5. Now yoou need to create the server, with the input  paramter of function of req and res. <br />
+```ruby
+// create the server which will take input of req and output as rs
+http.createServer(function(req, res){ 
+
+```
+6. At the end you can mention on which port it will listen.
+
+```ruby
+}).listen(4000, () => console.log("Your application is running on Port 4000"));
+```
+
+7. At the end you can see the full code where we can write it like.
+```ruby
+// Importing the http module
+const http = require('http')
+
+// create the server which will take input of req and output as rs
+http.createServer(function(req, res){
+
+
+// Adding requst header
+res.writeHead(200, {'Content-Type': 'text/html'});
+
+// Pass query string in URL localhost:4000/123
+var qs = req.url;
+
+res.write("<h1>hello Satya<h1>" + qs);
+
+// you need to complete the response here.
+res.end();
+
+}).listen(4000, () => console.log("Your application is running on Port 4000"));
+```
+8. you can stop server using ctrl + c
+
+### Nodemon
+
+1. In above code if you are changing anything in code you to stop server and rerun again.
+2. To avoid thatyou need to install nodemon. 
+3 Nodemon is a utility that will monitor for any changes in your source and automatically restart your server
+4. Just use nodemon instead of node to run your code, and now your process will automatically restart when your code changes. 
+5. Installing nodemon
+> npm install -g nodemon <br />
+
+run the node application <br />
+
+> nodemon index.js <br/>
+
+<b>***If above will not work follow the below process</b> <br/>
+
+First,Install Nodemon as ``` npm install --save nodemon ```  <br/>
+
+Than in package.json write the followings <br/>
+
+```ruby
+"scripts": {
+    "server": "nodemon server.js"
+  },
+  ```
+Now in terimnal check for.<br/>
+
+> npm run server <br/>
+> npm run server Index.js
+
+
+## Day 8 -  Filesystem
+1. File system is use to read and print the content of file.
+2. The Node File System (fs) module can be imported using the following syntax
+
+```ruby
+var fs = require("fs")
+```
+3. You can read it using the arrow function like below.
+
+```ruby
+fs.readFile(__dirname + "\\dummyfile.txt","utf-8",(err, data) =>
+{
+    if(err) throw err;
+    console.log(data);
+});
+```
+4. You can write the data to the file
+```ruby
+fs.writeFile('dummyfile.txt', 'Learn Node js in step by step', function(err) {
+    if (err) {
+       return console.error(err);
+    }
+});
+```
+
+### Read HTML File
+You can use the same process to read the HTML files also.
+
+You need to import both fs - file sysem and HTTP to create the server.
+```ruby
+const fs = require("fs");
+const http = require("http");
+```
+
+Now you need to create the server to see that file into browser and read that file using the fs as like below.
+
+```ruby
+const server = http.createServer((req, res) => {
+
+fs.readFile("myfirstpage.html","utf-8", (err, data) => 
+{
+    if(err) throw err;
+    res.writeHead(200, {"content-type":"text/html"});
+    res.write(data)
+    res.end();
+})
+
+
+}).listen("4000", console.log("Website is running on 4000 port."));
+```
+### Read file synchronously 
+
+1. The way we were reading the file is asnyc.<br/>
+2. NodeJs provide both the way to read the file, async and sync. <br/>
+
+> Async Method <br/>
+Here out will first print :  File Read Successfully  Than content of file.
+
+```ruby
+const fs = require("fs");
+
+fs.readFile("dummyfile.txt","utf-8",(err, data) =>
+{
+    if(err) throw err;
+    console.log(data);
+});
+
+console.log("++++++++++++++");
+console.log("File read successfully");
+```
+
+> Sync method. <br />
+a. In Async method we have call back but in Sync method we dont have call back. <br />
+b.  Better to keep it in try catch to catch the exception.<br />
+c.  Here first file data will print and then "File read successfully". <br />
+
+``` ruby
+const fs = require("fs");
+
+try
+{
+var data = fs.readFileSync("dummyfile.txt","utf-8")
+console.log(data);
+}
+catch(e)
+{
+    throw e;
+}
+
+console.log("++++++++++++++");
+console.log("File read successfully");
+```
+
+## Day 9.0 -  Events 
+###No Update...
+
+## Day 9.1 : Nodejs connection to SQL
+
+In this session i am going to demonstrate how we can connect to database.
+
+1. I am taking the example of how we can connect to SQL database.
+2. First you need to take the refrence of MSDatabase.
+3. For more details you will get on below link. <br/>
+https://www.npmjs.com/package/node-mssql - it is old ways<br/>
+4. Or by using mssql,  For more details you can see below link.<br/>
+https://www.npmjs.com/package/mssql <br/>
+Install mssql package like below
+```ruby
+npm install mssql
+```
+
+5. You need to enable  sql Network services from services.msc. <br/>
+
+6. Enable tcp/ip protocol as mentioned in below link of your system. <br/>
+https://stackoverflow.com/questions/25577248/node-js-mssql-tedius-connectionerror-failed-to-connect-to-localhost1433-conn
+
+7. Restart your system to see the effect of changes. <br/>
+8. Import MSSQL to application. <br/>
+```ruby
+var sql = require('mssql');
+```
+9. Create the configuration for DB connection.
+```ruby
+const config = {
+    user: 'sa',
+    password: 'password1',
+    server: 'REETPC', // You can use 'localhost\\instance' to connect to named instance
+    database: 'test12',
+}
+```
+
+10. Inserting records to the database
+``` ruby
+sql.connect(config).then(pool => {
+    
+    return pool.request()
+        .input('CustName', sql.VarChar(50), "satya")
+        .input('Phonenumber', sql.VarChar(10), "45677889")
+        .input('Age', sql.Int, 23)
+        // You can either insert records by  hard code query
+        //.query("INSERT INTO [test12].[dbo].[Customer]  ([CustName] ,[Phonenumber] ,[Age])   VALUES(  @CustName,  @Phonenumber,   @Age)")
+        
+        // OR you can write a store procedure and call that 
+         .execute('InsertCustomer',)
+        // .output('output_parameter', sql.VarChar(50))
+}).then(result => {
+    console.dir(result)
+}).catch(err => {
+    console.log(err);
+})
+
+```
+
+11. Here is the way you can use to  get the records  using hard coded query
+```ruby
+sql.connect(config).then(() => {
+    return sql.query`select * from [dbo].[Customer]`
+}).then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err);
+})
+```
+
+12. Fetch the result using store procedure.
+```ruby
+sql.connect(config).then(pool => {
+    return pool.request().execute("GetAllCustomer")
+}).then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err);
+})
+```
+
+13. Fetch the selected result using store procedure.
+```ruby
+sql.connect(config).then(pool => {
+    return pool.request().input('Customerid', sql.Int, 2).execute("GetCustomerbyId")
+}).then(result => {
+    console.log(result)
+}).catch(err => {
+    console.log(err);
+})
+```
 
 ## Day 10 -  ExpressJs
 
