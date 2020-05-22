@@ -10,7 +10,7 @@ run the node application
 > nodemon index.js
 
 ------------------------------
-If above will no follow the below process
+If above will not work follow the below process
 
 First, npm install --save nodemon then in package.json write the followings
 

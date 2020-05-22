@@ -2,7 +2,7 @@
 // http module is one of inbuild module which will help to create web server
 // it will help to see the output in browser
 
-// Improting the http module
+// Importing the http module
 const http = require('http')
 
 // create the server which will take input of req and output as rs

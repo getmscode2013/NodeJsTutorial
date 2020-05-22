@@ -1,5 +1,5 @@
 // File system is use to read and print the content of file.
-//The Node File System (fs) module can be imported using the following syntax
+// The Node File System (fs) module can be imported using the following syntax
 // var fs = require("fs")
 const fs = require("fs");
 
@@ -13,7 +13,7 @@ fs.readFile(__dirname + "\\dummyfile.txt","utf-8",function(err, data)
 });
 */
 
-// You can write it using the arrow function like below
+// You can read it using the arrow function like below
 fs.readFile(__dirname + "\\dummyfile.txt","utf-8",(err, data) =>
 {
     if(err) throw err;
